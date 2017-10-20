@@ -9,10 +9,9 @@ namespace Concurso
         static void Main(string[] args)
         {
            string[] concursantes = new string[5];
-           //List<string> concusantes = new List<string>();
            
            
-           for(int x=0; x<concursantes.Length; x++){
+           for(int x=0;x<concursantes.Length; x++){
             Console.WriteLine("Ingrese nombre del concursante:");
             concursantes[x]= Console.ReadLine();
             Console.WriteLine();
@@ -20,10 +19,19 @@ namespace Concurso
 
 
             Console.WriteLine();
+          
+            Console.WriteLine("Las personas registradas son: ");
+            for(int x=0;x<concursantes.Length; x++){
+                       
+            Console.WriteLine(concursantes[x]);
+            } 
+        
+            Console.WriteLine();
+            
 
             Random rnd = new Random();
             int aleatorio=  rnd.Next(0, concursantes.Length);
-            Console.Write("El conscursante aleatorio es: " + concursantes[aleatorio]);
+            Console.Write("El concursante aleatorio es: " + concursantes[aleatorio]);
             
 
            
